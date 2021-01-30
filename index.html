@@ -26,10 +26,10 @@
                      <div class="col-md-5 center-item ">
                         <div class="input-group number-spinner">
                            <button id="minus-button" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="phone-input" type="text" class="form-control text-center" value="1">
+                           <input id="phone-input" type="text" class="form-control text-center" value="0">
                            <button id="plus-button" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="phone-amount">1219</span></h5>
+                        <h5>$ <span id="phone-amount">0</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -44,11 +44,11 @@
                      <div class="col-md-5 center-item ">
                         <div class="input-group number-spinner ">
                            <button id="case-minus-button" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="case-input" type="text" class="form-control text-center" value="1">
+                           <input id="case-input" type="text" class="form-control text-center" value="0">
                            <button id="case-plus-button" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$ <span id="case-amount">59</span></h5>
+                        <h5>$ <span id="case-amount">0</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5 id="sub-total">$1,278</h5>
-                        <h5>$ <span id="tax"></span>0</h5>
-                        <h5>$ <span id="total">1,278</span> </h5>
+                        <h5 id="sub-total">$ 0</h5>
+                        <h5>$ <span id="tax">0</span></h5>
+                        <h5>$ <span id="total">0</span> </h5>
                      </div>
                   </div>
                </div>
@@ -149,8 +149,8 @@
          const totalAmount = subTotal + taxAmount;
 
          document.getElementById("sub-total").innerText ='$' + subTotal;
-         document.getElementById('tax').innerText = taxAmount;
-         document.getElementById('total').innerText = totalAmount;
+         document.getElementById('tax').innerText =Math.ceil(taxAmount) ;
+         document.getElementById('total').innerText = Math.ceil(totalAmount);
       }
 
       /** function handlePhoneChange(isIncrease) {
